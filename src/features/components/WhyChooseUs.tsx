@@ -1,65 +1,17 @@
-const benefits = [
-  {
-    number: "01",
-    title: "Experienced Technicians",
-    description:
-      "Our technicians have the skills and experience to diagnose and repair a wide range of home appliances.",
-  },
-  {
-    number: "02",
-    title: "Quick Response",
-    description:
-      "We understand that a broken appliance can disrupt your day. That's why we focus on quick and convenient service.",
-  },
-  {
-    number: "03",
-    title: "Transparent Pricing",
-    description:
-      "Know the repair cost before the work begins. We believe in clear and honest pricing.",
-  },
-  {
-    number: "04",
-    title: "Quality Service",
-    description:
-      "We focus on dependable repairs and quality workmanship to keep your appliances running longer.",
-  },
+const steps = [
+  { number: '01', title: 'Start with a conversation', description: 'Tell us what’s happening. We listen first, then help work out the right next step.' },
+  { number: '02', title: 'Know before we begin', description: 'We explain what we find and talk through the work before a repair gets underway.' },
+  { number: '03', title: 'Leave it in good hands', description: 'Our technicians bring care and experience to the details that get your home running again.' },
 ];
 
 function WhyChooseUs() {
-  return (
-    <section id="why-us" className="why-choose-us">
-      <div className="why-content">
-        <p className="section-label">WHY CHOOSE US</p>
-
-        <h2>
-          Repair Service You
-          <br />
-          Can Count On.
-        </h2>
-
-        <p>
-          We make appliance repair simple, convenient and reliable. From
-          diagnosis to repair, our team is focused on providing a smooth
-          experience for every customer.
-        </p>
-
-        <button>About Our Company →</button>
-      </div>
-
-      <div className="benefits">
-        {benefits.map((benefit) => (
-          <article className="benefit" key={benefit.number}>
-            <span>{benefit.number}</span>
-
-            <div>
-              <h3>{benefit.title}</h3>
-              <p>{benefit.description}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
+  return <section id="why-us" className="why-choose-us" data-reveal>
+    <div className="why-art" aria-hidden="true"><div className="why-disc"><span className="disc-center">✳</span><span className="disc-word disc-word-one">CARE</span><span className="disc-word disc-word-two">CRAFT</span><span className="disc-orbit" /></div><span className="art-caption">A GOOD FIX FEELS<br />LIKE A DEEP BREATH.</span></div>
+    <div className="why-content"><p className="eyebrow eyebrow-light"><span /> A BETTER KIND OF SERVICE</p><h2>Good repair<br />starts with <em>care.</em></h2><p className="why-lede">Trust isn’t a badge on a page. It’s how we treat you, your home, and the moment you call us.</p>
+      <div className="steps">{steps.map((step) => <article className="step" key={step.number} data-reveal><span className="step-number">{step.number}</span><div><h3>{step.title}</h3><p>{step.description}</p></div><span className="step-arrow" aria-hidden="true">↗</span></article>)}</div>
+      <div className="why-location"><span className="location-dot" /><span>LOCAL CARE, RIGHT HERE</span><strong>Ernakulam &amp; Thrissur</strong></div>
+    </div>
+  </section>;
 }
 
 export default WhyChooseUs;
