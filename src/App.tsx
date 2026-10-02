@@ -17,8 +17,17 @@ const pages: Record<string, ComponentType> = {
 };
 
 function App() {
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+  let pathname = window.location.pathname;
+
+  const repoPrefix = '/ServiceCenterStaticWebsite';
+  if (pathname.startsWith(repoPrefix)) {
+    pathname = pathname.substring(repoPrefix.length);
+  }
+
+  pathname = pathname.replace(/\/+$/, '') || '/';
+
   const Page = pages[pathname] ?? HomePage;
+
   return <>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <ScrollMotion pathname={pathname} />
@@ -29,5 +38,6 @@ function App() {
     <a className="mobile-book" href="https://wa.me/919995513149" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span> Book a repair</a>
   </>;
 }
+
 
 export default App;
