@@ -16,7 +16,7 @@ function Hero() {
       </div>
     </div>
     <div className="hero-visual reference-hero-visual">
-      <img className="hero-photo" src="/images/wetech-hero.png" alt="Wetech technician servicing a wall-mounted air conditioner in a home" fetchPriority="high" />
+     <img className="hero-photo" src="/ServiceCenterStaticWebsite/images/wetech-hero.png" alt="Wetech technician servicing a wall-mounted air conditioner in a home" />
       <div className="photo-shade" aria-hidden="true" />
     </div>
     <svg className="hero-bottom-wave" viewBox="0 0 1600 190" preserveAspectRatio="none" aria-hidden="true">
