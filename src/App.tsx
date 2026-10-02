@@ -17,15 +17,27 @@ const pages: Record<string, ComponentType> = {
 };
 
 function App() {
+  // 1. Check if a redirect parameter exists from 404.html
+  const urlParams = new URLSearchParams(window.location.search);
+  const redirectedPath = urlParams.get('p');
+
   let pathname = window.location.pathname;
 
-  const repoPrefix = '/ServiceCenterStaticWebsite';
-  if (pathname.startsWith(repoPrefix)) {
-    pathname = pathname.substring(repoPrefix.length);
+  // 2. If we came from a redirect, use that path instead and clean up the URL window state
+  if (redirectedPath) {
+    pathname = '/' + redirectedPath.replace(/~and~/g, '&');
+    // Clean up the browser URL bar so the "?p=" query string is hidden from users
+    window.history.replaceState(null, '', window.location.pathname + (pathname === '/' ? '' : pathname.substring(1)));
+  } else {
+    // Standard path resolution logic for normal navigation loops
+    const repoPrefix = '/ServiceCenterStaticWebsite';
+    if (pathname.startsWith(repoPrefix)) {
+      pathname = pathname.substring(repoPrefix.length);
+    }
   }
 
+  // 3. Clean up trailing slashes and select the active page component
   pathname = pathname.replace(/\/+$/, '') || '/';
-
   const Page = pages[pathname] ?? HomePage;
 
   return <>
@@ -35,9 +47,10 @@ function App() {
     <Navbar />
     <main id="main-content" className="route-stage"><Page /></main>
     <Footer />
-    <a className="mobile-book" href="https://wa.me/919995513149" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span> Book a repair</a>
+    <a className="mobile-book" href="https://wa.me" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span> Book a repair</a>
   </>;
 }
+
 
 
 export default App;
