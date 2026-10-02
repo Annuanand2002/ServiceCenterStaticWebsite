@@ -1,4 +1,3 @@
-import Navbar from './features/components/Navbar';
 import ScrollMotion from './features/components/ScrollMotion';
 import Footer from './features/components/Footer';
 import HomePage from './features/pages/HomePage';
@@ -10,6 +9,7 @@ import FaqPage from './features/pages/FaqPage';
 import TestimonialsPage from './features/pages/TestimonialsPage';
 import ContactPage from './features/pages/ContactPage';
 import type { ComponentType } from 'react';
+import Navbar from './features/components/navbar';
 
 const pages: Record<string, ComponentType> = {
   '/': HomePage, '/services': ServicesPage, '/about': AboutPage, '/gallery': GalleryPage,
