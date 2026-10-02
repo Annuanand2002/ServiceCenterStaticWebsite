@@ -1,4 +1,4 @@
-import Navbar from './features/components/Navbar';
+import Navbar from './features/components/navbar';
 import ScrollMotion from './features/components/ScrollMotion';
 import Footer from './features/components/Footer';
 import HomePage from './features/pages/HomePage';
