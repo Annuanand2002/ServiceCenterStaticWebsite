@@ -47,7 +47,7 @@ function App() {
     <Navbar />
     <main id="main-content" className="route-stage"><Page /></main>
     <Footer />
-    <a className="mobile-book" href="https://wa.me" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span> Book a repair</a>
+    <a className="mobile-book" href="https://wa.me/919207174921" target="_blank" rel="noreferrer"><span aria-hidden="true">↗</span> Book a repair</a>
   </>;
 }
 

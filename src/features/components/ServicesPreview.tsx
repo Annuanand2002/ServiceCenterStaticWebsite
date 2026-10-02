@@ -11,9 +11,9 @@ function ServicesPreview() {
     <div className="services-grid">{services.map((service) => <article className={`service-card ${service.tone}`} key={service.no} data-reveal>
       <div className="service-card-top"><span className="service-number">{service.no} / 04</span><span className="service-icon" aria-hidden="true">{service.icon}</span></div>
       <div className="service-card-copy"><span className="service-detail">{service.detail}</span><h3>{service.title}</h3><p>{service.problem}</p></div>
-      <a href={`https://wa.me/919995513149?text=${encodeURIComponent(`Hi Wetech, I need help with ${service.title.toLowerCase()}.`)}`} className="service-link" target="_blank" rel="noreferrer" aria-label={`Ask Wetech about ${service.title}`}>LET’S TALK <span aria-hidden="true">↗</span></a>
+      <a href={`https://wa.me/919207174921?text=${encodeURIComponent(`Hi Wetech, I need help with ${service.title.toLowerCase()}.`)}`} className="service-link" target="_blank" rel="noreferrer" aria-label={`Ask Wetech about ${service.title}`}>LET’S TALK <span aria-hidden="true">↗</span></a>
     </article>)}</div>
-    <div className="services-footnote"><span className="footnote-star">✳</span><p>Something else at home stopped working? <strong>Tell us about it.</strong></p><a href="https://wa.me/919995513149" target="_blank" rel="noreferrer">We’re listening <span aria-hidden="true">↗</span></a></div>
+    <div className="services-footnote"><span className="footnote-star">✳</span><p>Something else at home stopped working? <strong>Tell us about it.</strong></p><a href="https://wa.me/919207174921" target="_blank" rel="noreferrer">We’re listening <span aria-hidden="true">↗</span></a></div>
   </section>;
 }
 

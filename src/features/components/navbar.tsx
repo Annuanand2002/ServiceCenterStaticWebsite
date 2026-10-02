@@ -48,8 +48,8 @@ export default function Navbar() {
         })}
       </nav>
       <div className="nav-actions">
-        <a href="tel:+919995513149" className="nav-phone" aria-label="Call Wetech at +91 99955 13149"><span className="nav-phone-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 3.8 9.2 3l2.1 5-2.1 1.7a15.1 15.1 0 0 0 5.1 5.1l1.7-2.1 5 2.1-.8 2.6a2.4 2.4 0 0 1-2.6 1.7A16.2 16.2 0 0 1 4.9 6.4a2.4 2.4 0 0 1 1.7-2.6Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span><strong>+91 99955 13149</strong><small>Call for service</small></span></a>
-        <a href="https://wa.me/919995513149" className="nav-cta" target="_blank" rel="noreferrer"><svg className="calendar-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><path d="M7.5 3v4M16.5 3v4M4 9h16M8 12.5h2M14 12.5h2M8 16h2M14 16h2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg> Book a service</a>
+        <a href="tel:+919207174921" className="nav-phone" aria-label="Call Wetech at +91 99955 13149"><span className="nav-phone-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 3.8 9.2 3l2.1 5-2.1 1.7a15.1 15.1 0 0 0 5.1 5.1l1.7-2.1 5 2.1-.8 2.6a2.4 2.4 0 0 1-2.6 1.7A16.2 16.2 0 0 1 4.9 6.4a2.4 2.4 0 0 1 1.7-2.6Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></span><span><strong>+91 99955 13149</strong><small>Call for service</small></span></a>
+        <a href="https://wa.me/919207174921" className="nav-cta" target="_blank" rel="noreferrer"><svg className="calendar-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.8"/><path d="M7.5 3v4M16.5 3v4M4 9h16M8 12.5h2M14 12.5h2M8 16h2M14 16h2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg> Book a service</a>
       </div>
     </div>
   </header>;
